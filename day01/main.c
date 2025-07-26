@@ -122,6 +122,7 @@ int main() {
   scanf("%d", &choice);
 
   clock_t t1 = clock();
+
   switch (choice) {
     case 1: bubbleSort(arr, n);
       break;
@@ -133,13 +134,15 @@ int main() {
       break;
     case 5: mergeSort(arr, n);
       break;
+
     default:
       break;
   }
+
   clock_t t2 = clock();
   clock_t diff = t2 - t1;
   double timediff = (double)diff / (double)CLOCKS_PER_SEC;
-  printf("Clocks taken: %d clocks\nTime taken: %.24lf s\n", diff, timediff);
+  printf("Clocks taken: %ld clocks\nTime taken: %.24lf s\n", diff, timediff);
 
   return 0;
 }
