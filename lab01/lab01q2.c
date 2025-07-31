@@ -1,6 +1,6 @@
 #include "stdio.h"
 
-int calculatePrefixSum(int arr[], int prefixSum[], int n) {
+void calculatePrefixSum(int arr[], int prefixSum[], int n) {
   int sum = 0;
 
   for (int i=0; i<n; i++) {
@@ -24,9 +24,9 @@ int main() {
 
   calculatePrefixSum(arr, prefixSum, n);
 
+  printf("Prefix sum: ");
   for (int i=0; i<n; i++) printf("%d ", prefixSum[i]);
   printf("\n");
   
-
   return 0;
 }

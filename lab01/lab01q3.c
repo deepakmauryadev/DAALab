@@ -13,6 +13,11 @@ int main() {
 
   FILE *file = fopen("numbers.txt", "r");
 
+  if (file == NULL) {
+    printf("Error reading file!\n");
+    exit(1);
+  }
+
   for (int i=0; i<n; i++) {
     if (fscanf(file, "%d", &numbers[i]) != 1) {
       printf("File does not content enough numbers.\n");
